@@ -7,11 +7,11 @@ export default function Portfolio({ portfolio }:any) {
   return (
     <>
     <ProfileIcon />
-    <h1>yasuda naotoのポートフォリオサイトです</h1>
+    <h1>Portfolio<br />List</h1>
     <div className="main">
       <ul>
         {portfolio.map((portfolio:any) => (
-            <li key={portfolio.id}>
+            <li className="portfolioList" key={portfolio.id}>
               <Link href={`/portfolio/${portfolio.id}`}>
               <p className="emoji" suppressHydrationWarning={true}>{emojis[Math.floor(Math.random() * emojis.length)]}</p>
               {portfolio.title}

@@ -18,6 +18,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/pages/api/randomEmoji.js", "src/pages/portfolio/[id].js", "src/libs/client.js", "src/pages/components/Search.jsx"],
   "exclude": ["node_modules"]
 }

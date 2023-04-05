@@ -8,15 +8,15 @@ export const Pagination = ({ maxPageNumber, currentPageNumber }:any) => {
 
 
   return (
-    <div className="">
+    <div className="pagelink">
       {currentPageNumber !== 1 && (
         <Link href={`/portfolio/page/${prevPage}`}>
-          -- Previous
+          ＜ Previous
         </Link>
       )}
       {currentPageNumber !== maxPageNumber && (
         <Link href={`/portfolio/page/${nextPage}`}>
-          Next --
+          Next ＞
         </Link>
       )}
     </div>

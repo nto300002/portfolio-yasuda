@@ -4,7 +4,7 @@ body {
 
 .main {
   width: 60%;
-  height: 20em;
+  height: auto;
   padding: 3em 1em 3em 3em;
   margin: auto;
 }
@@ -16,16 +16,50 @@ body {
 }
 
 .main li {
-  height: 150px;
-  width: 200px;
+  font-size: 25px;
+  height: 200px;
+  width: 36%;
   background-color: white;
-  margin: 1em 1em 0 1em;
+  margin: 1em 1em 1em 1em;
   padding: 1em 1em 1em 1em;
   background-color: rgb(255, 255, 255);
   border-radius: 15px;
 }
 
-h1 {
+@media screen and (max-width: 480px) {
+  /* 480px以下に適用されるCSS（スマホ用） */
+  .main {
+    width: 60%;
+    margin: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .main ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+  }
+  .main li {
+    font-size: 15px;
+    height: 100px;
+    width: 100%;
+  }
+}
+
+a {
+  color: rgb(0, 0, 186);
+  text-decoration: none;
+}
+
+a :hover {
+  cursor: pointer;
+  color: red;
+}
+
+h1,
+h2 {
+  color: rgb(84, 84, 84);
   font-family: '游ゴシック体', 'ヒラギノ角ゴシック';
   font-size: 30px;
   text-align: center;
@@ -35,6 +69,8 @@ h1 {
   margin-bottom: 0.8em;
   background-color: rgb(255, 255, 255);
   border-radius: 15px;
+  border-bottom: 2px solid gray;
+  border-right: 2px solid gray;
 }
 
 .header {
@@ -48,17 +84,63 @@ h1 {
   font-size: 25px;
 }
 
+.footer {
+  background-color: white;
+  height: 40px;
+  width: 100%;
+  font-size: 20px;
+  text-align: center;
+  margin-top: 2em;
+}
+
 .headerNav {
   display: flex;
   font-size: 30px;
-  text-shadow: 2px 2px 1px rgb(61 70 70);
   letter-spacing: 2px;
   line-height: 23px;
   list-style: none;
 }
 
+@media screen and (max-width: 480px) {
+  /* 480px以下に適用されるCSS（スマホ用） */
+  .headerNav {
+    font-size: 20px;
+    letter-spacing: 1px;
+  }
+}
+
+.headerNav :nth-child(2) {
+  color: black;
+  margin-right: 2em;
+  text-shadow: 1px 1px 1px rgb(61 70 70);
+}
+
+.headerNav :nth-child(3) {
+  margin-left: auto;
+  margin-right: 2em;
+  text-shadow: none;
+}
+
 .headerTitle {
   padding-left: 0.4em;
+}
+
+.content {
+  font-family: '游ゴシック体', 'ヒラギノ角ゴシック';
+  font-size: 25px;
+  /* text-align: center; */
+  width: 80%;
+  padding: 1em 1em 1em 1em;
+  margin: auto;
+  margin-bottom: 0.8em;
+  background-color: rgb(255, 255, 255);
+  border-radius: 15px;
+}
+
+.content h1 {
+  font-size: 35px;
+  width: 80%;
+  text-align: left;
 }
 
 .icon {
@@ -79,7 +161,44 @@ h1 {
   margin-bottom: 4em;
 }
 
+.profileIcon :hover {
+  cursor: pointer;
+}
+
 .emoji {
   font-size: 30px;
   text-align: center;
+}
+
+@media screen and (max-width: 480px) {
+  /* 480px以下に適用されるCSS（スマホ用） */
+  .emoji {
+    font-size: 18px;
+  }
+}
+
+.pagelink {
+  width: 9.5em;
+  text-align: center;
+  margin: auto;
+  padding: 5px;
+  background-color: rgb(61, 132, 255);
+  border-radius: 10px;
+}
+
+.pagelink :hover {
+  cursor: pointer;
+}
+
+.pagelink a {
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+}
+
+@media screen and (max-width: 480px) {
+  /* 480px以下に適用されるCSS（スマホ用） */
+  .pagelink {
+    font-size: 18px;
+  }
 }

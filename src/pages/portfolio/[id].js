@@ -1,16 +1,20 @@
 import { client } from "../../libs/client";
+import { emojis } from "../api/randomEmoji";
 
 export default function portfolioId({ portfolio }) {
   return (
     <main>
       <div className="main">
+      <p>作成日時：{portfolio.publishedAt}</p>
+        <div className="content">
+        <p className="emoji" suppressHydrationWarning={true}>{emojis[Math.floor(Math.random() * emojis.length)]}</p>
         <h1>{portfolio.title}</h1>
-        <p>{portfolio.publishedAt}</p>
-        <div
-          dangerouslySetInnerHTML={{
-            __html: `${portfolio.content}`,
-          }}
-        />
+          <div
+            dangerouslySetInnerHTML={{
+              __html: `${portfolio.content}`,
+            }}
+          />
+        </div>
       </div>
     </main>
   );
