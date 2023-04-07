@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-export const Pagination = ({ maxPageNumber, currentPageNumber }:any) => {
+ const Pagination = ({ maxPageNumber, currentPageNumber }:any) => {
   currentPageNumber = Number(currentPageNumber);
   maxPageNumber = Number(maxPageNumber);
   const prevPage = currentPageNumber - 1;
@@ -22,3 +22,5 @@ export const Pagination = ({ maxPageNumber, currentPageNumber }:any) => {
     </div>
   );
 };
+
+export default Pagination

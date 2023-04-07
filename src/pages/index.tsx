@@ -1,6 +1,6 @@
 import { client } from "../libs/client";
 import Portfolio from "./components/Portfolio";
-import { Pagination } from "./components/Pagination"
+import Pagination from "./components/Pagination"
 
 export default function Home({ portfolio, totalCount }:any) {
   return (
